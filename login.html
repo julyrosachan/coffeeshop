@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chromatic Coffee</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div  id="login-section" class="login-container">
+    <h2>Login to <br><span>Chromatic Coffee</span></h2>
+    <form action="/login" method="POST">
+      <input type="text" name="username" placeholder="Username or Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <div class="register-link">
+      Don't have an account? <a href="/register">Register here</a>
+    </div>
+  </div>
+
+</body>
+</html>

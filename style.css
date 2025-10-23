@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 9999;
+    padding: 15px 20px;
+    top: 0;
+    /* Başlanğıcda rəngi mütləq ver, yoxsa rəng dəyişməz */
+    color: rgba(255, 255, 255); 
+    transition: box-shadow 1s ease, background-color 1s ease, color 1s ease;
+}
+
+.navbar h1 {
+    margin-left: 50px;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar ul li a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.contact ul {
+    display: flex;
+    gap: 10px;
+}
+
+/* Scroll zamanı əlavə olunacaq class */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.6); /* fon ağ olur */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    color: #333; /* yazı rəngi tünd olur */
+}
+
+.navbar.scrolled a {
+    color: #333; /* linklər də tünd rəng */
+}
+
+
+/* HOME SECTION */
+#home {
+    position: relative; /* overlay üçün lazım */
+    width: 100%;
+    height: 100vh;
+    background-image: url(./6ddcb86c81f1c9e3d7bedfcb26cb56bf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Tam overlay üçün .home-m */
+
+.home-m {
+    margin-top: 50px;
+    position: absolute; /* Tam yuxarıda qalsın */
+    top: 50%;  /* Mərkəzləşdirmək üçün */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(0, 0, 0, 0.6); Qara, amma şəffaf fon */
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 90%;
+    z-index: 10;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); */
+}
+
+.home-m h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.home-m p {
+    /* font-size: 1.3em */
+    /* margin-bottom: 15px; */
+    /* color: white; */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+#menu-in-menu {
+    padding: 10px 25px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 20px;
+    background-color: #7c3e21; /* Coffee-like brown */
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+    width: 250px;
+
+}
+
+#menu-in-menu:hover {
+    background-color: #b85923;
+    box-shadow: 0 0 100px 2px rgba(0, 0, 0, 0.5);
+}
+
+.origin{
+    color: white;
+}
+
+.rating{
+    font-size: 0.7em;
+    color: rgb(180, 180, 180);
+}
+
+/** LEARN SECTION  */
+
+#learn{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #7c3e21; */
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.video {
+  width: 500px;     /* kvadrat ölçü */
+  height: 500px;    /* kvadrat ölçü */
+  overflow: hidden; /* video konteynerindən çıxan hissələri gizlədir */
+  position: relative;
+  margin-top: 100px;
+  /* border: 1px solid #ccc; istəyə bağlı, konteyneri görmək üçün */
+}
+
+.video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* vacib — videonu konteynerə doldurur, deformasiya olmadan */
+}
+ .learn-right{
+    /* background-color: #dbd1d1; */
+    width: 500px;
+    height: 500px;
+    margin-top: 100px;
+    /* padding: 20px; */
+ }
+
+ .learn-right h3{
+    font-size: 2.4em;
+    color: #000000;
+    font-weight: 800;
+ }
+  .learn-right p{
+font-size: 1em;
+color: #161616;
+  }
+
+  .learnmore{
+    width: 90px;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    color: #dee4e9;
+    background-color: #7c3e21;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+
+  .learnmore:hover{
+      color: #7c3e21;
+    background-color: #dee4e9;
+  }
+
+/** -------------------------------* */
+  
+.wrapper h1{
+  font-size: 2.5rem;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #444;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.col{
+  width: calc(50% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
+}
+
+.front,
+.back{
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  border-radius: 10px;
+	background-position: center;
+	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	text-align: center;
+	min-height: 400px;
+	height: auto;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 1.5rem;
+    
+}
+
+.back{
+  background: #d5e9f8;
+  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+}
+
+.front:after{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: rgba(255,255,255,0.7);
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+
+#classes{
+  width: 100%;
+ 
+  height: 100vh;
+  /* background-color: #7c3e21; */
+  display: flex;
+  justify-content: space-around;
+align-items: center;
+}
+
+.classes-right{
+  margin-top: 100px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.classes-right h2{
+  font-size: 2.4em;
+  font-weight: 900;
+  color: #161616;
+}
+.classes-right p{
+  font-size: 1em;
+  width: 90%;
+  color: #161616;
+}
+.classes-right button{
+  width: 130px;
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+  background-color: #7c3e21;
+  color: #f1ede5;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+
+}
+
+.classes-right button:hover{
+  color: #7c3e21;
+  background-color: #f1ede5;
+}
+
+
+.classes-left{
+  width: 500px;     /* kvadrat ölçü */
+  height: 500px;    /* kvadrat ölçü */
+  overflow: hidden; /* video konteynerindən çıxan hissələri gizlədir */
+  position: relative;
+  margin-top: 100px;
+  /* border: 1px solid #ccc; istəyə bağlı, konteyneri görmək üçün */
+}
+
+img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* vacib — videonu konteynerə doldurur, deformasiya olmadan */
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.footer {
+  background-color: #3f2518;
+  color: #f1ede5;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #f1ede5;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #dcbfa7;
+}
+
+.footer-social {
+  margin-bottom: 15px;
+}
+
+.footer-social a {
+  color: #f1ede5;
+  margin: 0 10px;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #dcbfa7;
+}
+
+.footer-copy {
+  font-size: 0.8em;
+  color: #cbb9a4;
+}
+
+
+
